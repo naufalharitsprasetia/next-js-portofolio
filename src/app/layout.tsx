@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Naufal Harits Prasetia | Web Developers",
+  title: "My Portfolio | Naufal Harits Prasetia",
   description: "This Is My Portfolio (Naufal Harits Prasetia)",
 };
 
