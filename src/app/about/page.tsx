@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Typewriter from "react-ts-typewriter";
 
 export default function AboutPage() {
   return (
@@ -26,12 +29,19 @@ export default function AboutPage() {
                 </h1>
               </div>
               <h2 className="text-xl xs:text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-gradient-to-r from-blue-600 via-blue-300 to-blue-400 bg-clip-text h-8 xs:h-9 sm:h-10 md:h-12 flex items-center">
-                <div className="Typewriter" data-testid="typewriter-wrapper">
-                  <span className="Typewriter__wrapper">
-                    Fullstack Developer
-                  </span>
-                  <span className="Typewriter__cursor">|</span>
-                </div>
+                <Typewriter
+                  text={[
+                    "Web Developer",
+                    "Fullstack Developer",
+                    "Backend Developer",
+                    "Frontend Developer",
+                    "Machine Learning Engineer",
+                    "Android Engineer",
+                    "Programmer",
+                  ]}
+                  speed={200}
+                  loop={true}
+                />
               </h2>
             </div>
             <p className="text-xs xs:text-sm sm:text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl">
@@ -52,9 +62,9 @@ export default function AboutPage() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-file-down h-3.5 w-3.5 xs:h-4 xs:w-4 md:h-5 md:w-5"
                 >
                   <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
@@ -68,7 +78,7 @@ export default function AboutPage() {
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   viewBox="0 0 496 512"
                   className="h-3.5 w-3.5 xs:h-4 xs:w-4 md:h-5 md:w-5"
                   height="1em"
@@ -83,7 +93,7 @@ export default function AboutPage() {
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   version="1.1"
                   viewBox="0 0 16 16"
                   className="h-3.5 w-3.5 xs:h-4 xs:w-4 md:h-5 md:w-5"
