@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import SplashCursor from "../components/reactbits/SplashCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +25,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark bg-gray-50 dark:bg-gray-950">
+    <html
+      lang="en"
+      className="bg-gray-50 dark:bg-gray-900"
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch(_) {}
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        <SplashCursor />;
         <div
           className={`min-h-screen transition-colors duration-300 dark:bg-gray-900 bg-gray-50 text-gray-900 dark:text-gray-50`}
         >

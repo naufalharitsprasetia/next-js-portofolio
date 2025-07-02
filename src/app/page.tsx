@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   Download,
   ArrowRight,
@@ -10,22 +9,29 @@ import {
   Instagram,
 } from "lucide-react";
 import Image from "next/image";
+import ShinyText from "../components/reactbits/ShinyText";
 
 export default function Portfolio() {
   return (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       {/* Left Content */}
-      <div className="space-y-8">
+      <div className="space-y-7">
         {/* Badge */}
-        <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+        <div className="mt-4 inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
           Full Stack Web Developer
         </div>
 
         {/* Main Heading */}
         <div className="space-y-4">
-          <h1 className="text-4xl/[3.3rem] md:text-5xl/[3.3rem] lg:text-6xl/[3.3rem] font-bold text-gray-900 dark:text-white leading-tight">
+          <h1 className="text-4xl/[4rem] md:text-5xl/[4rem] lg:text-6xl/[4rem] font-bold text-gray-900 dark:text-white leading-tight">
             Hi, I am{" "}
-            <span className="text-blue-600 dark:text-blue-400">Naufal</span>
+            <ShinyText
+              text="Naufal"
+              disabled={false}
+              speed={4}
+              className=""
+              color="text-blue-600/70 dark:text-blue-400/70"
+            />
             <br />
             Harits Prasetia
           </h1>
@@ -38,13 +44,14 @@ export default function Portfolio() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium"
+          <a
+            target="_blank"
+            href="https://wa.me/081220594202"
+            className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 text-white px-8 py-3 rounded-lg font-medium"
           >
             Hire me
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          </a>
 
           <a
             href="/cv-naufal.pdf"
@@ -57,7 +64,7 @@ export default function Portfolio() {
         </div>
 
         {/* Social Links */}
-        <div className="pt-8">
+        <div className="pt-5">
           <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
             Find me on:
           </p>
@@ -100,6 +107,7 @@ export default function Portfolio() {
               <Image
                 src="/3potoku.png"
                 alt="Naufal Harits Prasetia"
+                priority
                 width={400}
                 height={400}
                 className="w-full h-full object-cover"
