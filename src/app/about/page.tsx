@@ -6,13 +6,6 @@ import { Calendar, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import ChromaGrid from "../../components/reactbits/ChromaGrid";
 import ClickSpark from "../../components/reactbits/ClickSpark";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -24,7 +17,7 @@ import "swiper/css/pagination";
 import "../slider.css";
 
 // import required modules
-import { Grid, Pagination, Autoplay, FreeMode } from "swiper/modules";
+import { Grid, Pagination, Autoplay } from "swiper/modules";
 
 const items = [
   {
@@ -353,172 +346,6 @@ export default function AboutPage() {
                 </h1>
                 <br />
                 {/* Start Here */}
-                {/* <Carousel>
-                  <CarouselContent>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/pptik.jpg"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Staff PPTIK ( Pusat Pelayanan Teknologi Informasi
-                            dan Komunikasi ) Unida Gontor
-                          </h1>
-                          <p className="text-xs mt-6">Feb 2023 - Present </p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/dema.JPG"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Ketua Bag. Pers dan Publikasi Dewan Mahasiswa UNIDA
-                            Gontor - Kabinet Hadisatya
-                          </h1>
-                          <p className="text-xs mt-6">Aug 2023 - Aug 2025</p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/tafsil.jpg"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Anggota Peneliti ( Penelitian Terapan Hibah
-                            Ristekdikti) - website tafsil.id
-                          </h1>
-                          <p className="text-xs mt-6">May 2024 - Oct 2024</p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/iium.jpg"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Internasional Community Service Programme with IIUM
-                            (Malaysia)
-                          </h1>
-                          <p className="text-xs mt-6">Feb 2025 - Mar 2025 </p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/bangkit.jpg"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Machine Learning Cohort at Bangkit Academy 2024
-                            Batch 2
-                          </h1>
-                          <p className="text-xs mt-6">Sep 2024 - Dec 2024 </p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/ospek.png"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Panitia Ospek 2024 - Bagian Penerimaan Mahasiswa
-                            Baru (PMB)
-                          </h1>
-                          <p className="text-xs mt-6">Nov 2024</p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/aslab.png"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Asisten Praktikum - Asisten Dosen - Asisten Lab
-                          </h1>
-                          <p className="text-xs mt-6">2023-2024</p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
-                        <div className="w-full h-52">
-                          <Image
-                            width={200}
-                            height={200}
-                            src="/experiences/juri.png"
-                            alt=""
-                            className="w-full h-52 object-cover"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h1 className="font-medium text-sm">
-                            Juri Lomba Web Development Festival Teknik
-                            Informatika Darussalam (FESTIDA) 2024
-                          </h1>
-                          <p className="text-xs mt-6">November 2024</p>
-                        </div>
-                      </Card>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel> */}
                 <div className="overflow-hidden whitespace-nowrap">
                   <div className="flex animate-marquee gap-4">
                     {[...Array(2)].map((_, i) => (
@@ -623,7 +450,11 @@ export default function AboutPage() {
                     pagination={{
                       clickable: true,
                     }}
-                    modules={[Grid, Pagination]}
+                    autoplay={{
+                      delay: 4000,
+                      disableOnInteraction: false,
+                    }}
+                    modules={[Grid, Pagination, Autoplay]}
                     className="mySwiper"
                   >
                     <SwiperSlide>
@@ -648,13 +479,90 @@ export default function AboutPage() {
                         />
                       </div>
                     </SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
                     <SwiperSlide>Slide 4</SwiperSlide>
                     <SwiperSlide>Slide 5</SwiperSlide>
                     <SwiperSlide>Slide 6</SwiperSlide>
                     <SwiperSlide>Slide 7</SwiperSlide>
                     <SwiperSlide>Slide 8</SwiperSlide>
                     <SwiperSlide>Slide 9</SwiperSlide>
+                    <SwiperSlide>Slide 10</SwiperSlide>
                   </Swiper>
                 </div>
               </div>
