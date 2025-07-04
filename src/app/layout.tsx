@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import SplashCursor from "../components/reactbits/SplashCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio | Naufal Harits Prasetia",
+  title: "Naufal HP",
   description: "This Is My Portfolio (Naufal Harits Prasetia)",
 };
 
@@ -48,11 +47,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <SplashCursor />;
         <div
           className={`min-h-screen transition-colors duration-300 dark:bg-gray-900 bg-gray-50 text-gray-900 dark:text-gray-50`}
         >
-          <main className="max-w-7xl mx-auto px-6 lg:px-20 pb-12 pt-20">
+          <main className="">
             {/* Main Content */}
             {children}
           </main>
