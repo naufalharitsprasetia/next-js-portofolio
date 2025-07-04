@@ -3,6 +3,7 @@
 /* @import "ChromaGrid.css"; */
 
 @theme inline {
+  --animate-marquee: marquee 40s linear infinite;
   --animate-shine: shine 5s linear infinite;
   --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
   --animate-star-movement-top: star-movement-top linear infinite alternate;
@@ -126,6 +127,14 @@
 }
 html {
   scroll-behavior: smooth;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 @keyframes shine {
   0% {

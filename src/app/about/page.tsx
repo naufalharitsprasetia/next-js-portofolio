@@ -353,7 +353,7 @@ export default function AboutPage() {
                 </h1>
                 <br />
                 {/* Start Here */}
-                <Carousel>
+                {/* <Carousel>
                   <CarouselContent>
                     <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                       <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
@@ -518,7 +518,88 @@ export default function AboutPage() {
                   </CarouselContent>
                   <CarouselPrevious />
                   <CarouselNext />
-                </Carousel>
+                </Carousel> */}
+                <div className="overflow-hidden whitespace-nowrap">
+                  <div className="flex animate-marquee gap-4">
+                    {[...Array(2)].map((_, i) => (
+                      // Duplikasi agar loop tak terlihat berhenti
+                      <div key={i} className="flex gap-4 p-4">
+                        {/* Mulai Card Experience */}
+                        {[
+                          {
+                            img: "/experiences/pptik.jpg",
+                            title:
+                              "Staff PPTIK (Pusat Pelayanan Teknologi Informasi dan Komunikasi) Unida Gontor",
+                            date: "Feb 2023 - Present",
+                          },
+                          {
+                            img: "/experiences/dema.JPG",
+                            title:
+                              "Ketua Bag. Pers dan Publikasi Dewan Mahasiswa UNIDA Gontor - Kabinet Hadisatya",
+                            date: "Aug 2023 - Aug 2025",
+                          },
+                          {
+                            img: "/experiences/tafsil.jpg",
+                            title:
+                              "Anggota Peneliti (Hibah Ristekdikti) - website tafsil.id",
+                            date: "May 2024 - Oct 2024",
+                          },
+                          {
+                            img: "/experiences/iium.jpg",
+                            title:
+                              "Internasional Community Service Programme with IIUM (Malaysia)",
+                            date: "Feb 2025 - Mar 2025",
+                          },
+                          {
+                            img: "/experiences/bangkit.jpg",
+                            title:
+                              "Machine Learning Cohort at Bangkit Academy 2024 Batch 2",
+                            date: "Sep 2024 - Dec 2024",
+                          },
+                          {
+                            img: "/experiences/ospek.png",
+                            title:
+                              "Panitia Ospek 2024 - Bagian Penerimaan Mahasiswa Baru (PMB)",
+                            date: "Nov 2024",
+                          },
+                          {
+                            img: "/experiences/aslab.png",
+                            title:
+                              "Asisten Praktikum - Asisten Dosen - Asisten Lab",
+                            date: "2023 - 2024",
+                          },
+                          {
+                            img: "/experiences/juri.png",
+                            title: "Juri Lomba Web Development FESTIDA 2024",
+                            date: "Nov 2024",
+                          },
+                        ].map((exp, idx) => (
+                          <div
+                            key={idx}
+                            className="min-w-[300px] max-w-[300px] flex-shrink-0 bg-white shadow-md rounded-lg overflow-hidden"
+                          >
+                            <div className="w-full h-52">
+                              <Image
+                                src={exp.img}
+                                width={300}
+                                height={200}
+                                alt={exp.title}
+                                className="w-full h-52 object-cover"
+                              />
+                            </div>
+                            <div className="p-4">
+                              <h1 className="font-medium text-sm text-wrap">
+                                {exp.title}
+                              </h1>
+                              <p className="text-xs mt-4">{exp.date}</p>
+                            </div>
+                          </div>
+                        ))}
+                        {/* End Cards */}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
             {/*  */}
