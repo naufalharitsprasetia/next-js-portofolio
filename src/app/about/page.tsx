@@ -91,7 +91,7 @@ export default function AboutPage() {
                   <div className="space-y-3 sm:space-y-4">
                     <div className="space-y-2">
                       <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-50 leading-tight">
-                        Hello, I am
+                        Hello, I am <br />
                         <span className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-transparent bg-clip-text animate-gradient">
                           Naufal Harits Prasetia
                         </span>
@@ -162,7 +162,7 @@ export default function AboutPage() {
                   <CardContent className="p-6 md:p-8">
                     <div className="flex flex-col md:flex-row gap-6">
                       {/* University Logo */}
-                      <div className="flex w-40 h-40 justify-center md:justify-start items-center place-self-center">
+                      <div className="flex md:w-40 md:h-40 justify-center md:justify-start items-center place-self-center">
                         <Image
                           src="/unidalogo.png"
                           alt="Universitas Darussalam Gontor"
@@ -350,7 +350,7 @@ export default function AboutPage() {
                   <div className="flex animate-marquee gap-4">
                     {[...Array(2)].map((_, i) => (
                       // Duplikasi agar loop tak terlihat berhenti
-                      <div key={i} className="flex gap-4 p-4">
+                      <div key={i} className="flex gap-10 p-4">
                         {/* Mulai Card Experience */}
                         {[
                           {
@@ -396,14 +396,14 @@ export default function AboutPage() {
                             date: "2023 - 2024",
                           },
                           {
-                            img: "/experiences/juri.png",
+                            img: "/experiences/juri.jpg",
                             title: "Juri Lomba Web Development FESTIDA 2024",
                             date: "Nov 2024",
                           },
                         ].map((exp, idx) => (
                           <div
                             key={idx}
-                            className="min-w-[300px] max-w-[300px] flex-shrink-0 bg-white shadow-md rounded-lg overflow-hidden"
+                            className="min-w-[300px] max-w-[300px] flex-shrink-0 bg-white dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-700 dark:text-gray-50 shadow-md rounded-lg overflow-hidden"
                           >
                             <div className="w-full h-52">
                               <Image
@@ -414,11 +414,13 @@ export default function AboutPage() {
                                 className="w-full h-52 object-cover"
                               />
                             </div>
-                            <div className="p-4">
+                            <div className="p-4 flex flex-col">
                               <h1 className="font-medium text-sm text-wrap">
                                 {exp.title}
                               </h1>
-                              <p className="text-xs mt-4">{exp.date}</p>
+                              <p className="text-xs mt-5 font-light">
+                                {exp.date}
+                              </p>
                             </div>
                           </div>
                         ))}
@@ -442,127 +444,86 @@ export default function AboutPage() {
                 <div className="">
                   <Swiper
                     style={{ height: "450px" }}
-                    slidesPerView={3}
-                    grid={{
-                      rows: 2,
+                    breakpoints={{
+                      320: {
+                        slidesPerView: 1,
+                        grid: {
+                          rows: 2,
+                        },
+                      },
+                      640: {
+                        slidesPerView: 2,
+                        grid: {
+                          rows: 2,
+                        },
+                      },
+                      1024: {
+                        slidesPerView: 3,
+                        grid: {
+                          rows: 2,
+                        },
+                      },
+                      1440: {
+                        slidesPerView: 3,
+                        grid: {
+                          rows: 2,
+                        },
+                      },
                     }}
                     spaceBetween={30}
                     pagination={{
                       clickable: true,
                     }}
                     autoplay={{
-                      delay: 4000,
+                      delay: 3000,
                       disableOnInteraction: false,
                     }}
+                    loop={true}
                     modules={[Grid, Pagination, Autoplay]}
                     className="mySwiper"
                   >
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/bangkit.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="w-full h-full">
-                        <Image
-                          width={400}
-                          height={200}
-                          src="/certif/juri.jpg"
-                          alt=""
-                          className="w-full h-52 object-cover"
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    <SwiperSlide>Slide 5</SwiperSlide>
-                    <SwiperSlide>Slide 6</SwiperSlide>
-                    <SwiperSlide>Slide 7</SwiperSlide>
-                    <SwiperSlide>Slide 8</SwiperSlide>
-                    <SwiperSlide>Slide 9</SwiperSlide>
-                    <SwiperSlide>Slide 10</SwiperSlide>
+                    {[
+                      "/certif/alikhtibar.png",
+                      "/certif/bangkit.jpg",
+                      "/certif/bwa.png",
+                      "/certif/coursera1.png",
+                      "/certif/coursera2.png",
+                      "/certif/coursera3.png",
+                      "/certif/coursera4.png",
+                      "/certif/codepolitan.png",
+                      "/certif/dema.png",
+                      "/certif/devfest.png",
+                      "/certif/dicoding1.png",
+                      "/certif/dicoding2.png",
+                      "/certif/dicoding3.png",
+                      "/certif/iium.png",
+                      "/certif/inagata.jpeg",
+                      "/certif/juri.jpg",
+                      "/certif/lomba1.png",
+                      "/certif/lomba2.png",
+                      "/certif/lomba3.png",
+                      "/certif/lomba4.png",
+                      "/certif/lomba5.png",
+                      "/certif/lomba6.jpeg",
+                      "/certif/lomba7.png",
+                      "/certif/lomba8.png",
+                      "/certif/msib.png",
+                      "/certif/pku.jpg",
+                      "/certif/progate.png",
+                      "/certif/udemy.png",
+                    ].map((src, idx) => (
+                      <SwiperSlide key={idx}>
+                        <div className="w-full h-full">
+                          <Image
+                            width={400}
+                            height={200}
+                            src={src}
+                            alt={`certif-${idx}`}
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
                 </div>
               </div>
