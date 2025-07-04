@@ -6,6 +6,13 @@ import { Calendar, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import ChromaGrid from "../../components/reactbits/ChromaGrid";
 import ClickSpark from "../../components/reactbits/ClickSpark";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const items = [
   {
@@ -89,9 +96,9 @@ export default function AboutPage() {
                       <Typewriter
                         text={[
                           "Web Developer",
-                          "Fullstack Developer",
-                          "Backend Developer",
-                          "Frontend Developer",
+                          "Full Stack Developer",
+                          "Back end Developer",
+                          "Front end Developer",
                           "Machine Learning Engineer",
                           "Android Engineer",
                           "Programmer",
@@ -306,10 +313,10 @@ export default function AboutPage() {
             </div>
             {/* Achievments */}
             <div className="achievments-container px-8 py-12">
-              {/* Education Section */}
+              {/* Achievments Section */}
               <div className="space-y-8">
                 <h1 className="text-4xl/normal md:text-5xl/normal font-bold text-center animate-gradient text-transparent bg-gradient-to-br from-blue-700  to-blue-400 bg-clip-text">
-                  <span>Achievments</span>{" "}
+                  <span>Achievements</span>{" "}
                 </h1>
                 <br />
                 <div className="relative">
@@ -326,7 +333,7 @@ export default function AboutPage() {
             </div>
             {/*  */}
             {/* Experience */}
-            <div className="-container px-8 py-12">
+            <div className="experience-container px-8 py-12">
               {/* Experience Section */}
               <div className="space-y-8">
                 <h1 className="text-4xl/normal md:text-5xl/normal font-bold text-center animate-gradient text-transparent bg-gradient-to-br from-blue-700  to-blue-400 bg-clip-text">
@@ -334,7 +341,164 @@ export default function AboutPage() {
                 </h1>
                 <br />
                 {/* Start Here */}
-                <div className="relative"></div>
+                <Carousel>
+                  <CarouselContent>
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/pptik.jpg"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Staff PPTIK ( Pusat Pelayanan Teknologi Informasi
+                            dan Komunikasi ) Unida Gontor
+                          </h1>
+                          <p className="text-xs mt-6">Aug 2022 - Present </p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/dema.JPG"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Ketua Bag. Pers dan Publikasi Dewan Mahasiswa UNIDA
+                            Gontor - Kabinet Hadisatya
+                          </h1>
+                          <p className="text-xs mt-6">Aug 2022 - Present </p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/tafsil.jpg"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Anggota Peneliti ( Penelitian Terapan Hibah
+                            Ristekdikti) - website tafsil.id
+                          </h1>
+                          <p className="text-xs mt-6">Aug 2022 - Present </p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/iium.jpg"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Internasional Community Service Programme with IIUM
+                            (Malaysia)
+                          </h1>
+                          <p className="text-xs mt-6">Feb 2025 - Mar 2025 </p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/bangkit.jpg"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Machine Learning Cohort at Bangkit Academy 2024
+                            Batch 2
+                          </h1>
+                          <p className="text-xs mt-6">Aug 2024 - Dec 2024 </p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/ospek.png"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Panitia Ospek 2024 - Bagian Penerimaan Mahasiswa
+                            Baru (PMB)
+                          </h1>
+                          <p className="text-xs mt-6">Juni 2024 - Juni 2024</p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/aslab.png"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Asisten Praktikum - Asisten Dosen - Asisten Lab
+                          </h1>
+                          <p className="text-xs mt-6">Juni 2024 - Juni 2024</p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
+            </div>
+            {/*  */}
+            {/* certifications */}
+            <div className="certifications-container px-8 py-12">
+              {/* certifications Section */}
+              <div className="space-y-8">
+                <h1 className="text-4xl/normal md:text-5xl/normal font-bold text-center animate-gradient text-transparent bg-gradient-to-br from-blue-700  to-blue-400 bg-clip-text">
+                  <span>Licenses & Certifications</span>{" "}
+                </h1>
+                <br />
+                {/* Start Here */}
+                <div className=""></div>
               </div>
             </div>
             {/*  */}

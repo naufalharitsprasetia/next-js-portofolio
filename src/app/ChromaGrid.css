@@ -98,7 +98,7 @@
   color: #fff;
   font-family: system-ui, sans-serif;
   display: grid;
-  grid-template-columns: 1fr auto;
+  /* grid-template-columns: 1fr auto; */
   row-gap: 0.25rem;
   column-gap: 0.75rem;
 }
