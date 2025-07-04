@@ -13,6 +13,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+import "../slider.css";
+
+// import required modules
+import { Grid, Pagination, Autoplay, FreeMode } from "swiper/modules";
 
 const items = [
   {
@@ -359,7 +371,7 @@ export default function AboutPage() {
                             Staff PPTIK ( Pusat Pelayanan Teknologi Informasi
                             dan Komunikasi ) Unida Gontor
                           </h1>
-                          <p className="text-xs mt-6">Aug 2022 - Present </p>
+                          <p className="text-xs mt-6">Feb 2023 - Present </p>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -379,7 +391,7 @@ export default function AboutPage() {
                             Ketua Bag. Pers dan Publikasi Dewan Mahasiswa UNIDA
                             Gontor - Kabinet Hadisatya
                           </h1>
-                          <p className="text-xs mt-6">Aug 2022 - Present </p>
+                          <p className="text-xs mt-6">Aug 2023 - Aug 2025</p>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -399,7 +411,7 @@ export default function AboutPage() {
                             Anggota Peneliti ( Penelitian Terapan Hibah
                             Ristekdikti) - website tafsil.id
                           </h1>
-                          <p className="text-xs mt-6">Aug 2022 - Present </p>
+                          <p className="text-xs mt-6">May 2024 - Oct 2024</p>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -439,7 +451,7 @@ export default function AboutPage() {
                             Machine Learning Cohort at Bangkit Academy 2024
                             Batch 2
                           </h1>
-                          <p className="text-xs mt-6">Aug 2024 - Dec 2024 </p>
+                          <p className="text-xs mt-6">Sep 2024 - Dec 2024 </p>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -459,7 +471,7 @@ export default function AboutPage() {
                             Panitia Ospek 2024 - Bagian Penerimaan Mahasiswa
                             Baru (PMB)
                           </h1>
-                          <p className="text-xs mt-6">Juni 2024 - Juni 2024</p>
+                          <p className="text-xs mt-6">Nov 2024</p>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -478,7 +490,28 @@ export default function AboutPage() {
                           <h1 className="font-medium text-sm">
                             Asisten Praktikum - Asisten Dosen - Asisten Lab
                           </h1>
-                          <p className="text-xs mt-6">Juni 2024 - Juni 2024</p>
+                          <p className="text-xs mt-6">2023-2024</p>
+                        </div>
+                      </Card>
+                    </CarouselItem>
+
+                    <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="flex flex-col py-0 justify-center items-center gap-0 overflow-hidden">
+                        <div className="w-full h-52">
+                          <Image
+                            width={200}
+                            height={200}
+                            src="/experiences/juri.png"
+                            alt=""
+                            className="w-full h-52 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h1 className="font-medium text-sm">
+                            Juri Lomba Web Development Festival Teknik
+                            Informatika Darussalam (FESTIDA) 2024
+                          </h1>
+                          <p className="text-xs mt-6">November 2024</p>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -498,7 +531,51 @@ export default function AboutPage() {
                 </h1>
                 <br />
                 {/* Start Here */}
-                <div className=""></div>
+                <div className="">
+                  <Swiper
+                    style={{ height: "450px" }}
+                    slidesPerView={3}
+                    grid={{
+                      rows: 2,
+                    }}
+                    spaceBetween={30}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    modules={[Grid, Pagination]}
+                    className="mySwiper"
+                  >
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/bangkit.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="w-full h-full">
+                        <Image
+                          width={400}
+                          height={200}
+                          src="/certif/juri.jpg"
+                          alt=""
+                          className="w-full h-52 object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>Slide 3</SwiperSlide>
+                    <SwiperSlide>Slide 4</SwiperSlide>
+                    <SwiperSlide>Slide 5</SwiperSlide>
+                    <SwiperSlide>Slide 6</SwiperSlide>
+                    <SwiperSlide>Slide 7</SwiperSlide>
+                    <SwiperSlide>Slide 8</SwiperSlide>
+                    <SwiperSlide>Slide 9</SwiperSlide>
+                  </Swiper>
+                </div>
               </div>
             </div>
             {/*  */}
