@@ -22,9 +22,9 @@ export default function Portfolio() {
       duration={400}
     >
       <div className="main-container">
+        <SplashCursor />
         <div className="home-container max-w-7xl mx-auto px-6 lg:px-20 pb-12 pt-20">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <SplashCursor />
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left Content */}
             <div className="space-y-7">
               {/* Badge */}
@@ -42,8 +42,7 @@ export default function Portfolio() {
                     speed={4}
                     className=""
                     color="text-blue-600/70 dark:text-blue-400/70"
-                  />
-                  <br />
+                  />{" "}
                   Harits Prasetia
                 </h1>
 
@@ -119,7 +118,7 @@ export default function Portfolio() {
               </div>
             </div>
             {/* Right Content - Profile Section */}
-            <div className="relative flex justify-center lg:justify-end">
+            <div className="relative flex justify-center lg:justify-center">
               <div className="relative">
                 {/* Main Profile Circle */}
                 <div className="relative w-80 h-80 lg:w-96 lg:h-96">

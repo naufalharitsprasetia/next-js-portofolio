@@ -528,6 +528,38 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+            {/* PENUTUP */}
+            <div className="text-center mb-8 sm:mb-12">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-700 dark:to-indigo-700 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl text-white">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
+                  Ingin Tahu Lebih Lanjut ?
+                </h3>
+                <p className="text-sm sm:text-base text-blue-100 mb-6 max-w-2xl mx-auto px-4">
+                  Jelajahi profil LinkedIn saya untuk mengetahui lebih banyak
+                  tentang pengalaman, proyek, dan pencapaian saya secara lebih
+                  lengkap dan detail.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/naufal-harits-prasetia-35b443283/"
+                  target="_blank"
+                  className="inline-flex mx-auto justify-center items-center bg-white text-blue-600 font-semibold py-3 px-6 sm:px-8 rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={20}
+                    height={20}
+                    className="w-8 h-8 inline-block mr-3"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      fill="#155dfc"
+                      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                    />
+                  </svg>
+                  Kunjungi LinkedIn Saya
+                </a>
+              </div>
+            </div>{" "}
             {/*  */}
           </div>
         </div>
