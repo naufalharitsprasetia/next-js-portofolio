@@ -96,7 +96,7 @@ export default function ContactPage() {
         <div className="main-container">
           <div className="container-contact max-w-7xl mx-auto px-6 lg:px-20 pb-12 pt-20">
             {/*  */}
-            <div className="container mx-auto my-12 max-w-5xl">
+            <div className="container mx-auto my-6 max-w-5xl">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
                   Contact Me

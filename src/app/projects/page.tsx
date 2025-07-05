@@ -46,9 +46,9 @@ export default function ProjectsPage() {
           <div className="container-skills max-w-7xl mx-auto px-6 lg:px-20 pb-12 pt-20">
             {/*  */}
             <div className="tech-skill-container mt-8">
-              <h1 className="text-2xl font-bold text-center">
-                This Is My Projects
-              </h1>
+              <h2 className="text-center text-3xl/normal md:text-4xl/normal font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
+                My Projects
+              </h2>
               <br />{" "}
               <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
                 {/* Profile Section */}

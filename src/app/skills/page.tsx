@@ -4,10 +4,44 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import ClickSpark from "../../components/reactbits/ClickSpark";
 import { technologies, categories } from "./skillsData";
+import { IconCloud } from "@/components/magicui/icon-cloud";
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "java",
+  "react",
+  "coreldraw",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "tensorflow",
+  "googlecloud",
+  "mysql",
+  "scratch",
+  "docker",
+  "git",
+  "php",
+  "laravel",
+  "tailwindcss",
+  "python",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "go",
+  "figma",
+];
 
 export default function SkillsPage() {
   const [selectedTech, setSelectedTech] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  );
 
   const filteredTechs =
     selectedCategory === "all"
@@ -24,8 +58,11 @@ export default function SkillsPage() {
     >
       <div className="main-container">
         <div className="container-skills max-w-7xl mx-auto px-6 lg:px-20 pb-12 pt-20">
-          <section className="p-4 bg-gray-50 dark:bg-zinc-900 text-center tech-skills">
-            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4">
+          <section className="p-4 text-center tech-skills">
+            <div className="relative flex size-full items-center justify-center overflow-hidden cursor-pointer">
+              <IconCloud images={images} />
+            </div>
+            <h2 className="text-center text-3xl/normal md:text-4xl/normal font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
               Keahlian & Teknologi
             </h2>
             <p className="text-zinc-600 dark:text-zinc-300 max-w-xl mx-auto mb-8">
@@ -82,9 +119,9 @@ export default function SkillsPage() {
               )}
             </div>
           </section>
-          <section className="mt-8 p-4 bg-gray-50 dark:bg-zinc-900 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4">
-              Skill Komunikasi
+          <section className="mt-8 p-4 text-center">
+            <h2 className="text-center text-3xl/normal md:text-4xl/normal font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
+              Communication Skills
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 justify-center items-center mx-auto">
               <div className="bg-white dark:bg-zinc-800 p-6 rounded-xl shadow-md hover:shadow-xl cursor-pointer transition-all">
