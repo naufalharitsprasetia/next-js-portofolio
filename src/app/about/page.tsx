@@ -91,7 +91,7 @@ export default function AboutPage() {
                   <div className="space-y-3 sm:space-y-4">
                     <div className="space-y-2">
                       <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-50 leading-tight">
-                        Hello, I am <br />
+                        Hello, I`m <br />
                         <span className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-transparent bg-clip-text animate-gradient">
                           Naufal Harits Prasetia
                         </span>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                       />
                     </h2>
                   </div>
-                  <p className="text-xs xs:text-sm sm:text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl">
+                  <p className="text-xs xs:text-sm sm:text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl text-justify">
                     Hi, I am Naufal Harits Prasetia, an aspiring Full-Stack
                     Developer and Machine Learning Enthusiast from Indonesia,
                     currently studying at the University of Darussalam Gontor.

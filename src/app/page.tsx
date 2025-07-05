@@ -35,7 +35,7 @@ export default function Portfolio() {
               {/* Main Heading */}
               <div className="space-y-4">
                 <h1 className="text-4xl/[4rem] md:text-5xl/[4rem] lg:text-6xl/[4rem] font-bold text-gray-900 dark:text-white leading-tight">
-                  Hi, I am{" "}
+                  Hi, I`m{" "}
                   <ShinyText
                     text="Naufal"
                     disabled={false}
